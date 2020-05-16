@@ -33,7 +33,7 @@ class Tickets(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     row_num = models.PositiveSmallIntegerField(null=False, blank=False)
     col_num = models.PositiveSmallIntegerField(null=False, blank=False)
-    movie = models.ForeignKey('Movie', on_delete=model.CASCADE,)
+    movie = models.ForeignKey('Movie', on_delete=models.CASCADE,)
     status = models.IntegerField(choices=TICKET_STATUS_CHOICES, default=1)
     session = models.CharField(blank=False, null=False, max_length=200)
 
